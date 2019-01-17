@@ -43,6 +43,11 @@ public class solution {
     ResultSet r=ps.executeQuery();
     ResultSetMetaData data = r.getMetaData();
 
+
+    String columnLabel = data.getColumnLabel(1);
+    Object columnValue = r.getObject(columnLabel);
+    System.out.println(columnValue);
+
     conn.close();
 
   }

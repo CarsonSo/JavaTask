@@ -34,7 +34,7 @@ public class solution {
     //Add samples and corresponding var in the data set (2 columns: Sample Var)
     for(int i=0; i<100000; i++){
       st.executeUpdate("INSERT INTO sowone (sample,var) "
-          +"VALUES "+ "("+samples[i] +", "+ Math.pow(samples[i]-Xi,2) +")");
+          +"VALUES "+ "("+samples[i] +", "+ Math.sqrt(Math.pow(samples[i]-Xi,2)) +")");
     }
 
     //Extract the avg of var -> the estimate of standard deviation of Xi
